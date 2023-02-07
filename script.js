@@ -88,3 +88,23 @@ const calculate = (n1, operator, n2) => {
     
     return result
   }
+
+
+
+  ////////////////////////////////////////////////////////////
+
+  let themeColor = "light";
+
+function toggleTheme() {
+  const calculator = document.getElementById("calculator");
+
+  if (themeColor === "light") {
+    calculator.style.backgroundColor = "darkgray";
+    themeColor = "dark";
+  } else {
+    calculator.style.backgroundColor = "white";
+    themeColor = "light";
+  }
+}
+
+document.getElementById("toggle-theme-button").addEventListener("click", toggleTheme);
