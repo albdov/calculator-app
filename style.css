@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body{
     background-color: #3A4663;
+    font-family: 'League Spartan', sans-serif;
 }
 
 .header{
@@ -67,6 +70,7 @@ body{
     padding: 20px;
     margin-bottom: 20px;
     box-sizing: border-box;
+    border-radius: 10px;
   }
   
   .keypad {
@@ -76,9 +80,11 @@ body{
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+    border-radius: 10px;
   }
   
   .keypad button {
+    cursor: pointer;
     width: 20%;
     height: 50px;
     font-size: 24px;
@@ -90,7 +96,22 @@ body{
     border-radius: 8px;
     font-weight: 700;
     border: none;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+    /* border-bottom: 5px solid inherit; */
+  }
+  
+ .btn-Num{
+   box-shadow: 0 4px #999;
+   
+  }
+  
+  .btn-dark{
+    box-shadow: 0 4px #3e4764;
+
+  }
+  .btn-red{
+    box-shadow: 0 4px #a0271a;
+
   }
 
   .keypad button.reset{
@@ -117,7 +138,7 @@ body{
     color: #000;
   }
 
-  .is-depressed{
+  .is-pressed{
     background-color: #fff;
   }
   

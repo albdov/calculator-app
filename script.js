@@ -3,12 +3,12 @@ const display = calculator.querySelector('.display');
 const keys = calculator.querySelector('.keypad');
 
 keys.addEventListener('click', (e) => {
-  if (!e.target.matches('button')) {
-    const key = e.target
-    Array.from(key.parentNode.children)
-    .forEach(k => k.classList.remove('is-depressed'))
-    return;
-  }
+  // if (!e.target.matches('button')) {
+  //   const key = e.target
+  //   Array.from(key.parentNode.children)
+  //   .forEach(k => k.classList.remove('is-pressed'))
+  //   return;
+  // }
 
   const key = e.target;
   console.log(key);
@@ -27,7 +27,7 @@ keys.addEventListener('click', (e) => {
     action === 'divide'
   ) {
     // console.log('operator key!');
-    // key.classList.add('is-depressed')
+    // key.classList.add('is-pressed')
     // calculator.dataset.previousKeyType = 'operator'
     calculator.dataset.firstValue = displayedNum
     calculator.dataset.operator = action
@@ -93,14 +93,16 @@ const calculate = (n1, operator, n2) => {
 
   ////////////////////////////////////////////////////////////
 
-  let themeColor = "light";
+  let themeColor = "dark";
 
 function toggleTheme() {
-  const calculator = document.getElementById("calculator");
+  const calculator = document.getElementsByClassName("calculator");
 
   if (themeColor === "light") {
+    console.log("Clicked 1");
     calculator.style.backgroundColor = "darkgray";
     themeColor = "dark";
+    console.log("Clicked 2");
   } else {
     calculator.style.backgroundColor = "white";
     themeColor = "light";
