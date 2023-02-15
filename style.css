@@ -113,13 +113,32 @@ body{
    box-shadow: 0 4px #999;
    
   }
+
+ .btn-Num:hover{
+  background-color: #FFFFFE;
   
-  .btn-dark{
-    box-shadow: 0 4px #3e4764;
+}
+
+.btn-dark{
+  box-shadow: 0 4px #3e4764;
+  
+}
+
+  #del:hover{
+    background-color: #A2B2E1;
 
   }
+  #reset:hover{
+    background-color: #A2B2E1;
+  }
+
   .btn-red{
     box-shadow: 0 4px #C85402;
+    /* box-shadow: 0 4px #8e1ec2; */
+ 
+  }
+  #equals:hover{
+    background-color: #F96B5B;
     /* box-shadow: 0 4px #8e1ec2; */
  
   }

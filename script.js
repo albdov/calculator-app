@@ -15,7 +15,7 @@ toggle.forEach((element) => {
       (one.style.backgroundColor = "#D03F2F"),
       (two.style.backgroundColor = "transparent"),
         (three.style.backgroundColor = "transparent");
-      console.log("One");
+      // console.log("One");
     } else if (e.target.id == "two") {
       (one.style.backgroundColor = "transparent"),
         (two.style.backgroundColor = "#C85402"),
