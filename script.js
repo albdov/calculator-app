@@ -152,6 +152,7 @@ keys.addEventListener("click", (e) => {
   }
 
   if (action === "delete") {
+    display.innerText = display.innerText.slice(0, -1)
     console.log("delete key!");
   }
 
@@ -179,27 +180,12 @@ const calculate = (n1, operator, n2) => {
     result = parseFloat(n1) / parseFloat(n2);
   }
 
+  result = result.toString().split(".")
+  result[0] = result[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  result.join(".");
+  console.log("hello:::  " + result);
+
   return result;
 };
 
 ////////////////////////////////////////////////////////////
-
-// let themeColor = "dark";
-
-// function toggleTheme() {
-//   const calculator = document.getElementsByClassName("calculator");
-
-//   if (themeColor === "light") {
-//     console.log("Clicked 1");
-//     calculator.style.backgroundColor = "darkgray";
-//     themeColor = "dark";
-//     console.log("Clicked 2");
-//   } else {
-//     calculator.style.backgroundColor = "white";
-//     themeColor = "light";
-//   }
-// }
-
-// document
-//   .getElementById("toggle-theme-button")
-//   .addEventListener("click", toggleTheme);
