@@ -33,12 +33,20 @@ body{
 
 }
 
+#two{
+  background-color: transparent;
+}
+#three{
+  background-color: transparent;
+}
+
 .toggle{
     display: flex;
     justify-content: space-evenly;
-}
-
-.toggle-btn{
+  }
+  
+  .toggle-btn{
+  width: 70px;
     background-color: #242D44;
     padding: 0.1em 0.5em;
     border-radius: 13px;
@@ -50,6 +58,7 @@ body{
     width: 15px;
     margin: 0.2em;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .calculator {

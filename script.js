@@ -1,6 +1,9 @@
 const calculator = document.querySelector(".calculator");
 const display = calculator.querySelector(".display");
 const keys = calculator.querySelector(".keypad");
+const one = document.querySelector("#one");
+const two = document.querySelector("#two");
+const three = document.querySelector("#three");
 
 const toggle = document.querySelectorAll(".btn-theme");
 console.log(toggle);
@@ -9,28 +12,30 @@ toggle.forEach((element) => {
   element.addEventListener("click", (e) => {
     // console.log(e.target.id);
     if (e.target.id === "one") {
-      
+      (one.style.backgroundColor = "#D03F2F"),
+      (two.style.backgroundColor = "transparent"),
+        (three.style.backgroundColor = "transparent");
       console.log("One");
     } else if (e.target.id == "two") {
-      const body = document.querySelector("body")
-      const header = document.querySelector(".header")
-      const keypad = document.querySelector(".keypad")
-      const btnDark = document.querySelectorAll(".btn-dark")
-      const reset = document.querySelector(".reset")
-      body.classList.add('body-two')
-      header.classList.add('header-two')
-      keypad.classList.add('keypad-two')
-      calculator.classList.add('calculator-two')
-      reset.classList.add('reset-two')
+      (one.style.backgroundColor = "transparent"),
+        (two.style.backgroundColor = "#C85402"),
+        (three.style.backgroundColor = "transparent");
+      const body = document.querySelector("body");
+      const header = document.querySelector(".header");
+      const keypad = document.querySelector(".keypad");
+      const btnDark = document.querySelectorAll(".btn-dark");
+      const reset = document.querySelector(".reset");
+      body.classList.add("body-two");
+      header.classList.add("header-two");
+      keypad.classList.add("keypad-two");
+      calculator.classList.add("calculator-two");
+      reset.classList.add("reset-two");
 
-      btnDark.forEach(btn =>{
-        btn.style.backgroundColor = "#378187"
-        btn.style.boxShadow = " 0 4px #02626b"
-
-      })
-      display.classList.add('display-two')
-
-
+      btnDark.forEach((btn) => {
+        btn.style.backgroundColor = "#378187";
+        btn.style.boxShadow = " 0 4px #02626b";
+      });
+      display.classList.add("display-two");
 
       // keypad.classList.remove('keypad')
       // .style.backgroundColor = "#E6E6E6"
@@ -47,28 +52,31 @@ toggle.forEach((element) => {
       // display.style.color = "#000"
       // console.log("Two");
     } else if (e.target.id === "three") {
-      const body = document.querySelector("body")
-      const header = document.querySelector(".header")
-      const keypad = document.querySelector(".keypad")
-      const btnDark = document.querySelector(".btn-dark")
-      const reset = document.querySelector(".reset")
-      const equals = document.querySelector(".equals")
-      const btnNum = document.querySelectorAll(".btn-Num")
-      body.classList.add('body-three')
-      header.classList.add('header-three')
-      keypad.classList.add('keypad-three')
-      calculator.classList.add('calculator-three')
-      reset.classList.add('reset-three')
-      btnNum.classList.add('btnNum-three')
-      display.classList.remove()
-      display.classList.add('display-three')
+      (one.style.backgroundColor = "transparent"),
+        (two.style.backgroundColor = "transparent"),
+        (three.style.backgroundColor = "#00DED0");
+      const body = document.querySelector("body");
+      const header = document.querySelector(".header");
+      const keypad = document.querySelector(".keypad");
+      const btnDark = document.querySelector(".btn-dark");
+      const reset = document.querySelector(".reset");
+      const equals = document.querySelector(".equals");
+      const btnNum = document.querySelectorAll(".btn-Num");
+      body.classList.add("body-three");
+      header.classList.add("header-three");
+      keypad.classList.add("keypad-three");
+      calculator.classList.add("calculator-three");
+      reset.classList.add("reset-three");
+      btnNum.classList.add("btnNum-three");
+      display.classList.remove();
+      display.classList.add("display-three");
       // btnNum.classList.add('btnNum-three')
       // btnDark.forEach(btn =>{
       //   btn.style.backgroundColor = "#378187"
       //   btn.style.boxShadow = " 0 4px #02626b"
 
       // })
-      display.classList.add('display-three')
+      display.classList.add("display-three");
       // btnNum.forEach(btn =>{
       //   btn.classList.add('btn-Num-three')
 
@@ -78,10 +86,10 @@ toggle.forEach((element) => {
       // header.style.color = "#FFE53D"
       // keypad.style.backgroundColor = "#331C4D"
       // calculator.style.backgroundColor = "#17062A"
-      btnDark.style.backgroundColor = "#56077C"
-      equals.style.backgroundColor = "#00DED0"
-      equals.style.boxShadow = "0 4px #00DED0"
-      btnDark.style.boxShadow = " 0 4px #8e1ec2"
+      btnDark.style.backgroundColor = "#56077C";
+      equals.style.backgroundColor = "#00DED0";
+      equals.style.boxShadow = "0 4px #00DED0";
+      btnDark.style.boxShadow = " 0 4px #8e1ec2";
       // reset.style.backgroundColor = "#56077C"
       // reset.style.boxShadow = "0 4px #8e1ec2"
       // display.style.backgroundColor = "#1E0936"
@@ -121,7 +129,7 @@ keys.addEventListener("click", (e) => {
     // displayedNum = keyContent
     calculator.dataset.firstValue = displayedNum;
     calculator.dataset.operator = action;
-    display.innerHTML = ''
+    display.innerHTML = "";
   }
 
   if (!action) {
@@ -152,7 +160,7 @@ keys.addEventListener("click", (e) => {
   }
 
   if (action === "delete") {
-    display.innerText = display.innerText.slice(0, -1)
+    display.innerText = display.innerText.slice(0, -1);
     console.log("delete key!");
   }
 
@@ -180,7 +188,7 @@ const calculate = (n1, operator, n2) => {
     result = parseFloat(n1) / parseFloat(n2);
   }
 
-  result = result.toString().split(".")
+  result = result.toString().split(".");
   result[0] = result[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   result.join(".");
   console.log("hello:::  " + result);
