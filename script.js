@@ -12,27 +12,81 @@ toggle.forEach((element) => {
       
       console.log("One");
     } else if (e.target.id == "two") {
-      document.querySelector("body").style.backgroundColor = "#E6E6E6"
+      const body = document.querySelector("body")
+      const header = document.querySelector(".header")
+      const keypad = document.querySelector(".keypad")
+      const btnDark = document.querySelectorAll(".btn-dark")
+      const reset = document.querySelector(".reset")
+      body.classList.add('body-two')
+      header.classList.add('header-two')
+      keypad.classList.add('keypad-two')
+      calculator.classList.add('calculator-two')
+      reset.classList.add('reset-two')
+
+      btnDark.forEach(btn =>{
+        btn.style.backgroundColor = "#378187"
+        btn.style.boxShadow = " 0 4px #02626b"
+
+      })
+      display.classList.add('display-two')
+
+
+
+      // keypad.classList.remove('keypad')
+      // .style.backgroundColor = "#E6E6E6"
+      // display.classList.removeAttribute()
+      // btnNum.forEach(btn =>{
+      //   btn.classList.remove('btn-Num-three')
+
+      // })
+      // const equals = document.querySelector(".equals")
+      // // calculator.style.backgroundColor = "#E6E6E6"
+      // equals.style.backgroundColor = "#C85402"
+      // equals.style.boxShadow = "0 4px #923e02"
+      // display.style.backgroundColor = "#EEEEEE"
+      // display.style.color = "#000"
+      // console.log("Two");
+    } else if (e.target.id === "three") {
+      const body = document.querySelector("body")
       const header = document.querySelector(".header")
       const keypad = document.querySelector(".keypad")
       const btnDark = document.querySelector(".btn-dark")
       const reset = document.querySelector(".reset")
       const equals = document.querySelector(".equals")
-      header.style.backgroundColor = "#E6E6E6"
-      header.style.color = "#000"
-      keypad.style.backgroundColor = "#D2CDCD"
-      calculator.style.backgroundColor = "#E6E6E6"
-      btnDark.style.backgroundColor = "#378187"
-      equals.style.backgroundColor = "#C85402"
-      equals.style.boxShadow = "0 4px #923e02"
-      btnDark.style.boxShadow = " 0 4px #02626b"
-      reset.style.backgroundColor = "#378187"
-      reset.style.boxShadow = "0 4px #02626b"
-      display.style.backgroundColor = "#EEEEEE"
-      display.style.color = "#000"
-      console.log("Two");
-    } else if (e.target.id === "three") {
-      console.log("Three");
+      const btnNum = document.querySelectorAll(".btn-Num")
+      body.classList.add('body-three')
+      header.classList.add('header-three')
+      keypad.classList.add('keypad-three')
+      calculator.classList.add('calculator-three')
+      reset.classList.add('reset-three')
+      btnNum.classList.add('btnNum-three')
+      display.classList.remove()
+      display.classList.add('display-three')
+      // btnNum.classList.add('btnNum-three')
+      // btnDark.forEach(btn =>{
+      //   btn.style.backgroundColor = "#378187"
+      //   btn.style.boxShadow = " 0 4px #02626b"
+
+      // })
+      display.classList.add('display-three')
+      // btnNum.forEach(btn =>{
+      //   btn.classList.add('btn-Num-three')
+
+      // })
+      // header.style.backgroundColor = "#17062A"
+      // btnNum.style.backgroundColor = "#331C4D"
+      // header.style.color = "#FFE53D"
+      // keypad.style.backgroundColor = "#331C4D"
+      // calculator.style.backgroundColor = "#17062A"
+      btnDark.style.backgroundColor = "#56077C"
+      equals.style.backgroundColor = "#00DED0"
+      equals.style.boxShadow = "0 4px #00DED0"
+      btnDark.style.boxShadow = " 0 4px #8e1ec2"
+      // reset.style.backgroundColor = "#56077C"
+      // reset.style.boxShadow = "0 4px #8e1ec2"
+      // display.style.backgroundColor = "#1E0936"
+      // display.style.color = "#FFE53D"
+      // console.log("Three");
     }
   });
 });
@@ -46,15 +100,15 @@ keys.addEventListener("click", (e) => {
   // }
 
   const key = e.target;
-  console.log(key);
+  // console.log(key);
   const action = key.dataset.action;
-  console.log(action);
+  // console.log(action);
   const keyContent = key.textContent;
-  console.log(keyContent);
-  const displayedNum = display.textContent;
-  console.log(displayedNum);
+  // console.log(keyContent);
+  let displayedNum = display.textContent;
+  // console.log(displayedNum);
   const previousKeyType = calculator.dataset.previousKeyType;
-
+  // console.log(previousKeyType);
   if (
     action === "add" ||
     action === "subtract" ||
@@ -64,8 +118,10 @@ keys.addEventListener("click", (e) => {
     // console.log('operator key!');
     // key.classList.add('is-pressed')
     // calculator.dataset.previousKeyType = 'operator'
+    // displayedNum = keyContent
     calculator.dataset.firstValue = displayedNum;
     calculator.dataset.operator = action;
+    display.innerHTML = ''
   }
 
   if (!action) {
@@ -86,8 +142,11 @@ keys.addEventListener("click", (e) => {
 
   if (action === "calculate") {
     const firstValue = calculator.dataset.firstValue;
+    console.log(firstValue);
     const operator = calculator.dataset.operator;
+    console.log(operator);
     const secondValue = displayedNum;
+    console.log(secondValue);
 
     display.textContent = calculate(firstValue, operator, secondValue);
   }

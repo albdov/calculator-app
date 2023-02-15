@@ -111,7 +111,8 @@ body{
   }
   .btn-red{
     box-shadow: 0 4px #C85402;
-
+    /* box-shadow: 0 4px #8e1ec2; */
+ 
   }
 
   .keypad button.reset{
@@ -142,3 +143,118 @@ body{
     background-color: #fff;
   }
   
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  /* Second Toggle Button */
+
+
+  .body-two{
+    background-color: #E6E6E6;
+  }
+
+  .header-two{
+    background-color: #E6E6E6;
+    color: #000;
+}
+
+.keypad-two{
+  background-color: #D2CDCD;
+  
+}
+.calculator-two{
+  background-color: #E6E6E6;
+  
+}
+
+.display-two{
+  background-color: #FFFFFF;
+  color: #000;
+  width: 100%;
+  height: 100px;
+  /* background-color: #181F33;
+  color: #fff; */
+  font-size: 36px;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  
+}
+
+.reset-two{
+  /* background-color: #378187; */
+  /* box-shadow : 0 4px #02626b; */
+  width: 45%;
+  /* background-color: #647198; */
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+  /* Third Toggle Button */
+
+
+  .body-three{
+    background-color: #17062A;
+  }
+
+  .header-three{
+    background-color: #17062A;
+    color: #FFE53D;
+}
+
+.keypad-three{
+  background-color: #331C4D;
+  
+}
+
+.btnNum-three{
+  color: #FFE53D;
+
+}
+.calculator-three{
+  background-color: #17062A;
+  
+}
+
+.display-three{
+  background-color: #1E0936;
+  color: #FFE53D;
+  width: 100%;
+  height: 100px;
+  /* background-color: #181F33;
+  color: #fff; */
+  font-size: 36px;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  
+}
+
+.reset-three{
+  /* background-color: #378187; */
+  /* box-shadow : 0 4px #02626b; */
+  width: 45%;
+  /* background-color: #647198; */
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+
+
+  .btn-Num-three{
+    color: #FFE53D;
+    background-color: #f18973;
+  }
+  
+  
+  /* .keypad button {
+
+  } */
