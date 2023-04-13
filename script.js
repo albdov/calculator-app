@@ -214,4 +214,3 @@ const calculate = (n1, operator, n2) => {
 
   return result;
 };
-
