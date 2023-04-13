@@ -178,6 +178,7 @@ keys.addEventListener("click", (e) => {
   }
 
   if (action === "decimal") {
+    // displayedNum += ".";
     console.log("decimal key!");
   }
 
