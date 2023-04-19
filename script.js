@@ -34,6 +34,12 @@ toggle.forEach((element) => {
           btn.style.backgroundColor = '#EAE3DC'
           btn.style.boxShadow = '0 4px #b3b2b2'
           btn.style.color = '#434A59'
+          btn.addEventListener("mouseenter", () => {
+            btn.style.backgroundColor = '#cfc4bc';
+          });
+          btn.addEventListener("mouseleave", () => {
+            btn.style.backgroundColor = '#EAE3DC';
+          });
         })
         btnDark.forEach(btn =>{
           btn.style.backgroundColor = '#647198'
@@ -59,6 +65,12 @@ toggle.forEach((element) => {
           btn.style.backgroundColor = '#EAE3DC'
           btn.style.boxShadow = '0 4px #b3b2b2'
           btn.style.color = '#434A59'
+          btn.addEventListener("mouseenter", () => {
+            btn.style.backgroundColor = '#FFFFFF';
+          });
+          btn.addEventListener("mouseleave", () => {
+            btn.style.backgroundColor = '#EAE3DC';
+          });
         })
         btnDark.forEach(btn =>{
           btn.style.backgroundColor = '#378187'
@@ -97,6 +109,12 @@ toggle.forEach((element) => {
           btn.style.backgroundColor = '#331C4D'
           btn.style.boxShadow = '0 4px #56077C'
           btn.style.color = '#FFE53D'
+          btn.addEventListener("mouseenter", () => {
+            btn.style.backgroundColor = '#6C34AC';
+          });
+          btn.addEventListener("mouseleave", () => {
+            btn.style.backgroundColor = '#331C4D';
+          });
         })
         btnDark.forEach(btn =>{
           btn.style.backgroundColor = '#56077C'
@@ -105,53 +123,6 @@ toggle.forEach((element) => {
         })
     }
   });
-  const btnNumHoverColor = "#FFFFFE";
-    const btnDarkBoxShadow = "0 4px #3e4764";
-    const delHoverColor = "#A2B2E1";
-    const resetHoverColor = "#A2B2E1";
-    const btnRedBoxShadow = "0 4px #C85402";
-    const equalsHoverColor = "#F96B5B";
-    btnNum.forEach(btn => {
-      btn.addEventListener("mouseenter", () => {
-        btn.style.backgroundColor = btnNumHoverColor;
-      });
-      btn.addEventListener("mouseleave", () => {
-        btn.style.backgroundColor = "";
-      });
-    });
-
-    btnDark.forEach(btn => {
-      // btn.style.boxShadow = btnDarkBoxShadow;
-    });
-
-    const del = document.querySelector("#del");
-    del.addEventListener("mouseenter", () => {
-      del.style.backgroundColor = delHoverColor;
-    });
-    del.addEventListener("mouseleave", () => {
-      del.style.backgroundColor = ""; 
-    });
-
-    const reset = document.querySelector("#reset");
-    reset.addEventListener("mouseenter", () => {
-      reset.style.backgroundColor = resetHoverColor;
-    });
-    reset.addEventListener("mouseleave", () => {
-      reset.style.backgroundColor = ""; 
-    });
-
-    const btnRed = document.querySelectorAll(".btn-red");
-    btnRed.forEach(btn => {
-      btn.style.boxShadow = btnRedBoxShadow;
-    });
-
-    const equals = document.querySelector("#equals");
-    equals.addEventListener("mouseenter", () => {
-      equals.style.backgroundColor = equalsHoverColor;
-    });
-    equals.addEventListener("mouseleave", () => {
-      equals.style.backgroundColor = "";
-    });
 });
 
 
